@@ -1,0 +1,28 @@
+{
+  "name": "sw-ichild-scraper",
+  "description": "Scrape ichild.co.uk.",
+  "homepage": [
+    ""
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jprichardson/node-scrap.git"
+  },
+  "keywords": [
+    "screen",
+    "scraping",
+    "scraper"
+  ],
+  "author": "Simon Wheatley <simon@simonwheatley.co.uk>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "dependencies": {
+    "scrap": "*",
+    "jquery": "*"
+  },
+  "main": "./scraper.js"
+}
