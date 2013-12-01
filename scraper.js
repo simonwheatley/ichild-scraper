@@ -1,7 +1,7 @@
 var scrap = require('scrap');
 
-//scrap('http://www.ichild.co.uk/listings/search/postcode/M218AT/distance/10/date/1388912400/limit/5/page/', function(err, $) {
-scrap('http://local.wordpress.dev/search.html', function(err, $) {
+scrap('http://www.ichild.co.uk/listings/search/postcode/M218AT/distance/10/date/1388912400/limit/5/page/', function(err, $) {
+// scrap('http://local.wordpress.dev/search.html', function(err, $) {
 	var minders = [];
 	var i = 0;
 	$( '[id$=_member]>div:first-child' ).each( function() {
@@ -19,9 +19,9 @@ scrap('http://local.wordpress.dev/search.html', function(err, $) {
 		minder.vacancy = "No";
 		if ( $( this ).parent().find( 'div.grid_3 .vacancy' ).length )
 			minder.vacancy = "Yes";
-		// scrap(minder.url, function(err, $) {
-
-		// }
+		scrap(minder.url, function(err, $) {
+			// console.log( $( '#view_listing' ).html() );
+		});
 		console.log( minder );
 	} );
 	console.log( "Finished " + i );
